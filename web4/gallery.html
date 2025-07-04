@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery - Line Ace Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/image/logo.png" alt="Line Ace Studios Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h1>Project Gallery</h1>
+        <p>Explore our portfolio of completed works</p>
+    </section>
+
+    <section class="gallery-controls">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterSelection('all')">All Projects</button>
+            <button class="filter-btn" onclick="filterSelection('residential')">Residential</button>
+            <button class="filter-btn" onclick="filterSelection('commercial')">Commercial</button>
+            <button class="filter-btn" onclick="filterSelection('public')">Public</button>
+            <button class="filter-btn" onclick="filterSelection('interior')">Interior</button>
+        </div>
+        <div class="sort-options">
+            <label for="sort">Sort by:</label>
+            <select id="sort" onchange="sortGallery()">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="name">Project Name</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="gallery-grid">
+        <div class="gallery-item residential">
+            <img src="/image/gallery1.jpg" alt="Hillside Residence">
+            <div class="gallery-overlay">
+                <h3>Hillside Residence</h3>
+                <p>Modern home with panoramic views</p>
+                <button class="view-btn" onclick="openModal('gallery1.jpg', 'Hillside Residence')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item commercial">
+            <img src="/image/gallery2.jpg" alt="Tech Campus">
+            <div class="gallery-overlay">
+                <h3>Tech Campus</h3>
+                <p>Innovative workspace design</p>
+                <button class="view-btn" onclick="openModal('gallery2.jpg', 'Tech Campus')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item public">
+            <img src="/image/gallery3.jpeg" alt="Community Center">
+            <div class="gallery-overlay">
+                <h3>Community Center</h3>
+                <p>Public space for gatherings</p>
+                <button class="view-btn" onclick="openModal('gallery3.jpg', 'Community Center')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item interior">
+            <img src="/image/gallery4.jpg" alt="Luxury Apartment">
+            <div class="gallery-overlay">
+                <h3>Luxury Apartment</h3>
+                <p>High-end interior design</p>
+                <button class="view-btn" onclick="openModal('gallery4.jpg', 'Luxury Apartment')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item residential">
+            <img src="/image/gallery5.jpg" alt="Beach House">
+            <div class="gallery-overlay">
+                <h3>Beach House</h3>
+                <p>Coastal living redefined</p>
+                <button class="view-btn" onclick="openModal('gallery5.jpg', 'Beach House')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item commercial">
+            <img src="/image/gallery6.jpg" alt="Retail Complex">
+            <div class="gallery-overlay">
+                <h3>Retail Complex</h3>
+                <p>Shopping experience reimagined</p>
+                <button class="view-btn" onclick="openModal('gallery6.jpg', 'Retail Complex')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item public">
+            <img src="/image/gallery7.jpeg" alt="Urban Park">
+            <div class="gallery-overlay">
+                <h3>Urban Park</h3>
+                <p>Green space in the city</p>
+                <button class="view-btn" onclick="openModal('gallery7.jpg', 'Urban Park')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item interior">
+            <img src="/image/gallery8.jpg" alt="Office Interior">
+            <div class="gallery-overlay">
+                <h3>Office Interior</h3>
+                <p>Productivity-focused design</p>
+                <button class="view-btn" onclick="openModal('gallery8.jpg', 'Office Interior')">View Details</button>
+            </div>
+        </div>
+        <div class="gallery-item residential">
+            <img src="/image/gallery9.jpg" alt="Mountain Retreat">
+            <div class="gallery-overlay">
+                <h3>Mountain Retreat</h3>
+                <p>Harmony with nature</p>
+                <button class="view-btn" onclick="openModal('gallery9.jpg', 'Mountain Retreat')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="galleryModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="project-details">
+                    <div class="detail">
+                        <h4>Location</h4>
+                        <p id="modalLocation">Various locations</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Year</h4>
+                        <p id="modalYear">2020-2023</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Area</h4>
+                        <p id="modalArea">Varies by project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Inspired by Our Work?</h2>
+            <p>Let's collaborate on your next project</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="logo.png" alt="Line Ace Studios Logo" class="footer-logo">
+                <p>Innovative architectural design since 2010</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +234 (704) 338-6105</p>
+                <p><i class="fas fa-envelope"></i> info@lineacestudios.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Line Ace Studios. All rights reserved. | Group 5</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

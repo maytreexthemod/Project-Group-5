@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Line Ace Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/image/logo.png" alt="Line Ace Studios Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h1>Our Services</h1>
+        <p>Comprehensive architectural solutions tailored to your needs</p>
+    </section>
+
+    <section class="services-section">
+        <div class="service-tabs">
+            <button class="tab-btn active" onclick="openService('residential')">Residential</button>
+            <button class="tab-btn" onclick="openService('commercial')">Commercial</button>
+            <button class="tab-btn" onclick="openService('interior')">Interior Design</button>
+            <button class="tab-btn" onclick="openService('urban')">Urban Planning</button>
+        </div>
+
+        <div id="residential" class="service-content active">
+            <div class="service-details">
+                <h2>Residential Architecture</h2>
+                <p>We create homes that reflect your personality while maximizing functionality and comfort. Our residential services include:</p>
+                <ul>
+                    <li>Custom home design</li>
+                    <li>Renovations and additions</li>
+                    <li>Sustainable housing solutions</li>
+                    <li>Multi-family residential projects</li>
+                    <li>Landscape integration</li>
+                </ul>
+                <a href="contact.html" class="btn">Start Your Project</a>
+            </div>
+            <div class="service-image">
+                <img src="/image/gallery6.jpg" alt="Residential Architecture">
+            </div>
+        </div>
+
+        <div id="commercial" class="service-content">
+            <div class="service-details">
+                <h2>Commercial Architecture</h2>
+                <p>Designing spaces that enhance productivity, brand identity, and customer experience. Our commercial services include:</p>
+                <ul>
+                    <li>Office buildings and workspaces</li>
+                    <li>Retail and hospitality design</li>
+                    <li>Mixed-use developments</li>
+                    <li>Healthcare facilities</li>
+                    <li>Educational institutions</li>
+                </ul>
+                <a href="contact.html" class="btn">Start Your Project</a>
+            </div>
+            <div class="service-image">
+                <img src="/image/gallery8" alt="Commercial Architecture">
+            </div>
+        </div>
+
+        <div id="interior" class="service-content">
+            <div class="service-details">
+                <h2>Interior Design</h2>
+                <p>Creating harmonious interiors that complement the architectural vision. Our interior services include:</p>
+                <ul>
+                    <li>Space planning and optimization</li>
+                    <li>Material and finish selection</li>
+                    <li>Lighting design</li>
+                    <li>Custom furniture design</li>
+                    <li>Brand-aligned commercial interiors</li>
+                </ul>
+                <a href="contact.html" class="btn">Start Your Project</a>
+            </div>
+            <div class="service-image">
+                <img src="/image/office.jpg" alt="Interior Design">
+            </div>
+        </div>
+
+        <div id="urban" class="service-content">
+            <div class="service-details">
+                <h2>Urban Planning</h2>
+                <p>Shaping communities through thoughtful, sustainable urban design. Our urban planning services include:</p>
+                <ul>
+                    <li>Master planning</li>
+                    <li>Site analysis and selection</li>
+                    <li>Zoning and land use studies</li>
+                    <li>Public space design</li>
+                    <li>Sustainable community development</li>
+                </ul>
+                <a href="contact.html" class="btn">Start Your Project</a>
+            </div>
+            <div class="service-image">
+                <img src="/image/gallery3.jpeg" alt="Urban Planning">
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2>Our Design Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Discovery</h3>
+                <p>Understanding your vision, needs, and project parameters</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Concept Development</h3>
+                <p>Creating initial designs and exploring possibilities</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Design Refinement</h3>
+                <p>Evolving the concept based on your feedback</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Technical Documentation</h3>
+                <p>Preparing detailed construction documents</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Implementation</h3>
+                <p>Overseeing the realization of the design</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's discuss how we can bring your architectural vision to life</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="/image/logo.png" alt="Line Ace Studios Logo" class="footer-logo">
+                <p>Innovative architectural design since 2010</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +234 (704) 338-6105</p>
+                <p><i class="fas fa-envelope"></i> info@lineacestudios.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Line Ace Studios. All rights reserved. | Group 5</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
